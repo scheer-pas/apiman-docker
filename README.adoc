@@ -1,0 +1,122 @@
+[![Docker Image CI](https://github.com/apiman/apiman-docker/actions/workflows/docker-image.yml/badge.svg)](https://github.com/apiman/apiman-docker/actions/workflows/docker-image.yml)
+
+== apiman docker images
+
+This project contains docker images for various platforms.See the README.md files in each
+subfolder for more details.
+
+
+.Docker Image Overview
+|===
+|Image |Description |Geting started | Deployment Note
+
+|`apiman/manager-wildfly`
+|The Apiman manager running on Wildlfy (without gateway)
+a|
+----
+docker pull apiman/manager-wildfly:latest
+docker run -it -p 8443:8443 apiman/manager-wildfly
+# or
+docker pull ghcr.io/apiman/manager-wildfly:latest
+docker run -it -p 8443:8443 ghcr.io/apiman/manager-wildfly
+----
+|This image should be considered for a production deployment!
+
+
+|`apiman/manager-tomcat`
+|The Apiman manager running on Tomcat (without gateway)
+a|
+----
+docker pull apiman/manager-tomcat:latest
+docker run -it -p 8443:8443 apiman/manager-tomcat
+# or
+docker pull ghcr.io/apiman/manager-tomcat:latest
+docker run -it -p 8443:8443 ghcr.io/apiman/manager-tomcat
+----
+|This image should be considered for a production deployment!
+
+
+|`apiman/vertx-gateway`
+|The vert.x gateway a small docker image
+a|
+----
+docker pull apiman/vertx-gateway:latest
+docker run -it -p 8080:8080 apiman/vertx-gateway
+# or
+docker pull ghcr.io/apiman/vertx-gateway:latest
+docker run -it -p 8080:8080 ghcr.io/apiman/vertx-gateway
+----
+|This image should be considered for a production deployment!
+
+
+|`apiman/on-wildfly`
+|The all-in-one-container for testing and debugging
+a|
+----
+docker pull apiman/on-wildfly:latest
+docker run -it -p 8443:8443 apiman/on-wildfly
+# or
+docker pull ghcr.io/apiman/on-wildfly:latest
+docker run -it -p 8443:8443 ghcr.io/apiman/on-wildfly
+----
+|This image should be used only for testing!
+
+
+|`apiman/vertx-openshift`
+|The vert.x gateway on openshift
+a|
+----
+docker pull apiman/vertx-openshift:latest
+# or
+docker pull ghcr.io/apiman/vertx-openshift:latest
+----
+|Community maintained
+
+|`apiman/vertx-standalone`
+|The vert.x gateway as a standalone image
+a|
+----
+docker pull apiman/vertx-standalone:latest
+docker run -it -p 8082:8082 apiman/vertx-standalone
+# or
+docker pull ghcr.io/apiman/cli:latest
+docker run -it -p 8082:8082 ghcr.io/apiman/vertx-standalone
+----
+| Community maintained
+
+|===
+
+
+.Docker CLI Images
+|===
+|Image |Description |Geting started | Deployment Note
+
+|`apiman/cli`
+|The Apiman cli
+a|
+----
+docker pull apiman/cli:latest
+docker run --rm -it apiman/cli [args]
+# or
+docker pull ghcr.io/apiman/cli:latest
+docker run --rm -it ghcr.io/apiman/cli [args]
+----
+|
+
+
+|`apiman/migration-assistant`
+|The migration-assistant will help during an upgrade of Apiman
+a|
+----
+docker pull apiman/migration-assistant:latest
+docker run --rm -it apiman/migration-assistant [args]
+# or
+docker pull ghcr.io/apiman/migration-assistant:latest
+docker run --rm -it ghcr.io/apiman/migration-assistant [args]
+----
+|
+|===
+
+== Docker Hub and GHCR
+
+You can pull the latest images directly from [docker hub](https://hub.docker.com/u/apiman) or GitHub Container Registry.
