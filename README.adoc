@@ -1,6 +1,6 @@
-[![Docker Image CI](https://github.com/apiman/apiman-docker/actions/workflows/docker-image.yml/badge.svg)](https://github.com/apiman/apiman-docker/actions/workflows/docker-image.yml)
+image:https://github.com/apiman/apiman-docker/actions/workflows/docker-image.yml/badge.svg["Docker Image CI", link="https://github.com/apiman/apiman-docker/actions/workflows/docker-image.yml"]
 
-== apiman docker images
+== Apiman Docker Images
 
 This project contains docker images for various platforms.See the README.md files in each
 subfolder for more details.
@@ -119,4 +119,4 @@ docker run --rm -it ghcr.io/apiman/migration-assistant [args]
 
 == Docker Hub and GHCR
 
-You can pull the latest images directly from [docker hub](https://hub.docker.com/u/apiman) or GitHub Container Registry.
+You can pull the latest images directly from https://hub.docker.com/u/apiman[Docker Hub] or https://github.com/orgs/apiman/packages?repo_name=apiman-docker[GitHub Container Registry].
