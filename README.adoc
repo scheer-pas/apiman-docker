@@ -89,7 +89,7 @@ docker run -it -p 8082:8082 ghcr.io/apiman/vertx-standalone
 
 .Docker CLI Images
 |===
-|Image |Description |Geting started | Deployment Note
+|Image |Description |Getting started | Deployment Note
 
 |`apiman/cli`
 |The Apiman cli
