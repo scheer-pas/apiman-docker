@@ -3,7 +3,7 @@ FROM jboss/wildfly:20.0.1.Final
 MAINTAINER florian.volk@scheer-group.com
 EXPOSE 8080 8443
 
-ARG APIMAN_VERSION=2.1.0.Final
+ARG APIMAN_VERSION
 
 USER root
 WORKDIR $JBOSS_HOME
