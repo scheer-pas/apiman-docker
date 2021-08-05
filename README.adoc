@@ -2,17 +2,18 @@ image:https://github.com/apiman/apiman-docker/actions/workflows/docker-image.yml
 
 == Apiman Docker Images
 
-This project contains docker images for various platforms.See the README.md files in each
-subfolder for more details.
+This project contains docker images for various platforms.
+See the README files in each subfolder for more details.
 
 
 .Docker Image Overview
 |===
-|Image |Description |Geting started | Deployment Note
+| Image | Description | Deployment Notes
 
-|`apiman/manager-wildfly`
-|The Apiman manager running on Wildlfy (without gateway)
-a|
+| `apiman/manager-wildfly`
+| Apiman manager running on WildFly (without gateway)
+| Production grade
+3+a|
 ----
 docker pull apiman/manager-wildfly:latest
 docker run -it -p 8443:8443 apiman/manager-wildfly
@@ -20,12 +21,11 @@ docker run -it -p 8443:8443 apiman/manager-wildfly
 docker pull ghcr.io/apiman/manager-wildfly:latest
 docker run -it -p 8443:8443 ghcr.io/apiman/manager-wildfly
 ----
-|This image should be considered for a production deployment!
 
-
-|`apiman/manager-tomcat`
-|The Apiman manager running on Tomcat (without gateway)
-a|
+| `apiman/manager-tomcat`
+| Apiman manager running on Tomcat (without gateway)
+| Production grade
+3+a|
 ----
 docker pull apiman/manager-tomcat:latest
 docker run -it -p 8443:8443 apiman/manager-tomcat
@@ -33,12 +33,11 @@ docker run -it -p 8443:8443 apiman/manager-tomcat
 docker pull ghcr.io/apiman/manager-tomcat:latest
 docker run -it -p 8443:8443 ghcr.io/apiman/manager-tomcat
 ----
-|This image should be considered for a production deployment!
 
-
-|`apiman/vertx-gateway`
-|The vert.x gateway a small docker image
-a|
+| `apiman/vertx-gateway`
+| The Vert.x gateway (size-optimised image)
+| Production grade
+3+a|
 ----
 docker pull apiman/vertx-gateway:latest
 docker run -it -p 8080:8080 apiman/vertx-gateway
@@ -46,12 +45,11 @@ docker run -it -p 8080:8080 apiman/vertx-gateway
 docker pull ghcr.io/apiman/vertx-gateway:latest
 docker run -it -p 8080:8080 ghcr.io/apiman/vertx-gateway
 ----
-|This image should be considered for a production deployment!
 
-
-|`apiman/on-wildfly`
-|The all-in-one-container for testing and debugging
-a|
+| `apiman/on-wildfly`
+| All-in-one-container for testing and debugging
+| Testing grade
+3+a|
 ----
 docker pull apiman/on-wildfly:latest
 docker run -it -p 8443:8443 apiman/on-wildfly
@@ -59,22 +57,21 @@ docker run -it -p 8443:8443 apiman/on-wildfly
 docker pull ghcr.io/apiman/on-wildfly:latest
 docker run -it -p 8443:8443 ghcr.io/apiman/on-wildfly
 ----
-|This image should be used only for testing!
 
-
-|`apiman/vertx-openshift`
-|The vert.x gateway on openshift
-a|
+| `apiman/vertx-openshift`
+| The Vert.x gateway on OpenShift
+| Community maintained
+3+a|
 ----
 docker pull apiman/vertx-openshift:latest
 # or
 docker pull ghcr.io/apiman/vertx-openshift:latest
 ----
-|Community maintained
 
-|`apiman/vertx-standalone`
-|The vert.x gateway as a standalone image
-a|
+| `apiman/vertx-standalone`
+| The Vert.x gateway + CLI (headless optimised)
+| Community maintained
+3+a|
 ----
 docker pull apiman/vertx-standalone:latest
 docker run -it -p 8082:8082 apiman/vertx-standalone
@@ -82,18 +79,18 @@ docker run -it -p 8082:8082 apiman/vertx-standalone
 docker pull ghcr.io/apiman/cli:latest
 docker run -it -p 8082:8082 ghcr.io/apiman/vertx-standalone
 ----
-| Community maintained
 
 |===
 
 
 .Docker CLI Images
 |===
-|Image |Description |Getting started | Deployment Note
+|Image |Description | Deployment Notes
 
 |`apiman/cli`
 |The Apiman cli
-a|
+|
+3+a|
 ----
 docker pull apiman/cli:latest
 docker run --rm -it apiman/cli [args]
@@ -101,12 +98,11 @@ docker run --rm -it apiman/cli [args]
 docker pull ghcr.io/apiman/cli:latest
 docker run --rm -it ghcr.io/apiman/cli [args]
 ----
-|
-
 
 |`apiman/migration-assistant`
 |The migration-assistant will help during an upgrade of Apiman
-a|
+|
+3+a|
 ----
 docker pull apiman/migration-assistant:latest
 docker run --rm -it apiman/migration-assistant [args]
@@ -114,7 +110,6 @@ docker run --rm -it apiman/migration-assistant [args]
 docker pull ghcr.io/apiman/migration-assistant:latest
 docker run --rm -it ghcr.io/apiman/migration-assistant [args]
 ----
-|
 |===
 
 == Docker Hub and GHCR
